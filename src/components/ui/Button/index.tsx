@@ -10,7 +10,7 @@ const Button = ({ children, ...rest }: ButtonProps) => {
 	return (
 		<button
 			className={cn(
-				"uppercase bg-primary rounded-lg px-10 py-3 md:text-lg hover:bg-primary/90 transition-all font-bold tracking-wider disabled:bg-primary/30 disabled:text-light/40 disabled:cursor-not-allowed",
+				"bg-primary px-10 py-2.5 md:text-lg hover:bg-light hover:text-primary transition-all text-light font-bold tracking-wider disabled:bg-primary/30 disabled:text-light/40 disabled:cursor-not-allowed",
 				rest.className,
 			)}
 			{...rest}

@@ -2,15 +2,20 @@ import { NavLinkProps } from "@/components/Navbar/NavLink";
 
 export const navLinks: NavLinkProps[] = [
 	{
-		href: "#hero",
-		label: "Home",
+		href: "/#about",
+		label: "O nas",
 	},
 	{
-		href: "#services",
-		label: "Services",
+		href: "/#offer",
+		label: "Oferta",
+	},
+	{
+		href: "/fleet",
+		label: "Flota",
 	},
 	{
 		href: "#contact",
-		label: "Contact",
+		label: "Kontakt",
+		filled: true,
 	},
 ];

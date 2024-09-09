@@ -10,9 +10,8 @@ type Config = {
 export const config: Config = {
 	metadata: {
 		root: {
-			title: "Pixel Blaze starter",
-			description: "Custom Websites Crafted Just for You",
-			metadataBase: new URL("https://pixel-blaze.com/"),
+			title: "Total Cars - Wynajem luksusowych limuzyn z kierowcą",
+			description: "Wynajem luksusowych limuzyn z kierowcą",
 			openGraph: {
 				images: "/opengraph-image.png",
 			},

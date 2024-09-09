@@ -6,24 +6,17 @@ export type NavLinkProps = {
 	href: string;
 	label: string;
 	filled?: boolean;
-	mobile?: boolean;
 };
 
-export default function NavLink({
-	href,
-	label,
-	filled = false,
-	mobile = false,
-}: NavLinkProps) {
+export default function NavLink({ href, label, filled = false }: NavLinkProps) {
 	return (
 		<Link href={href}>
 			<span
 				className={cn(
-					"transition-all hover:opacity-90 text-light",
+					"transition-all hover:text-primary text-light text-lg",
 					filled
-						? "bg-primary px-4 py-2 rounded-lg"
-						: "hover:bg-primary rounded-lg px-2 py-1",
-					mobile && "text-lg",
+						? "bg-primary hover:bg-light px-4 py-2"
+						: "px-2 py-1",
 				)}
 			>
 				{label}

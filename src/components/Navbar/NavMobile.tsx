@@ -7,17 +7,24 @@ import { Squash as Hamburger } from "hamburger-react";
 import NavLogo from "./NavLogo";
 import NavLink from "./NavLink";
 import { navLinks } from "@/config/navbar";
+import { useStickyNavbar } from "@/hooks/useStickyNavbar";
+import { cn } from "@/utils/cn";
 
 export const NavMobile = () => {
 	const [isOpen, setOpen] = useState(false);
 	const ref = useRef(null);
+	const isSticky = useStickyNavbar();
 
 	useClickAway(ref, () => setOpen(false));
 
 	return (
 		<div
 			ref={ref}
-			className="lg:hidden p-6 fixed top-0 left-0 right-0 bg-dark z-10 max-w-[100vw]"
+			className={cn(
+				"lg:hidden p-6 fixed top-0 left-0 right-0 z-20 max-w-[100vw] transition-all",
+				isSticky && "bg-dark p-4",
+				isOpen && "bg-dark p-6",
+			)}
 		>
 			<div className="flex justify-between">
 				<div
@@ -59,7 +66,7 @@ export const NavMobile = () => {
 										key={route.href}
 										onClick={() => setOpen((prev) => !prev)}
 									>
-										<NavLink {...route} mobile />
+										<NavLink {...route} />
 									</motion.li>
 								);
 							})}
