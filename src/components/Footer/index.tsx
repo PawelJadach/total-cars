@@ -28,7 +28,10 @@ const Footer = () => {
 							data-aos-delay="300"
 							className="flex items-center gap-4"
 						>
-							<PhoneIcon /> 696 058 169 - Grzegorz
+							<PhoneIcon />
+							<a href="tel:+48696058169">
+								+48 696 058 169 - Grzegorz
+							</a>
 						</p>
 						<p
 							data-aos="fade-right"
